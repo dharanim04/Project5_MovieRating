@@ -31,6 +31,7 @@ for(const k in display ) {
       }
 
       const html = `<div class="card col-md-2">
+      <a href = "movies/${movie.id}">
           <img class="d-block w-100" src="${IMAGE_BASE_URL + movie.poster_path}" alt="${movie.title}">
           <span>
           <h4 class="card-info"><i class="fa fa-star checked"></i>${movie.vote_average}</h4>
