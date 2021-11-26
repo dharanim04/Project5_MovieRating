@@ -80,7 +80,7 @@ router.post('/', redirectToHome, (req, res) => {
   if(!isValid(cleanedEmail, emailRegex)) req.flash("error", "Email is not valid")
 
   if (req.session.flash.error && req.session.flash.error.length > 0) return res.redirect("/login")
-
+ 
   
   db.oneOrNone('SELECT * FROM users WHERE email=$1;', [cleanedEmail])
   .then(user => {
